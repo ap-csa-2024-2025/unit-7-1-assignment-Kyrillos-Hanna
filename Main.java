@@ -7,10 +7,25 @@ public class Main
   {
     Scanner sc = new Scanner(System.in);
     String input = "";
-
+    ArrayList<String> wordList = new ArrayList<String>();
+    System.out.println("Please enter words, enter STOP to stop the loop.");
     while (!input.equals("STOP"))
     {
-      System.out.println("infinite loop! replace with your code");
+      input = sc.nextLine();
+      wordList.add(input);
     }
+    wordList.remove(wordList.size() - 1);
+    System.out.println("\n" + wordList.size());
+    System.out.println(wordList);
+
+    if (wordList.size() > 2) {
+      String first = wordList.get(0);
+      wordList.set(wordList.size() - 1, first);
+      wordList.remove(0);
+    }
+
+    System.out.println(wordList);
+
+    sc.close();
   }
 }
