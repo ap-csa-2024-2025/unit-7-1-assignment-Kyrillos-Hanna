@@ -18,9 +18,10 @@ public class Main
     System.out.println("\n" + wordList.size());
     System.out.println(wordList);
 
+    String first = wordList.get(0);
+    wordList.set(wordList.size() - 1, first);
+    
     if (wordList.size() > 2) {
-      String first = wordList.get(0);
-      wordList.set(wordList.size() - 1, first);
       wordList.remove(0);
     }
 
